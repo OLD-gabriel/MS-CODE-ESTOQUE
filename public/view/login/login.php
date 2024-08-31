@@ -11,6 +11,7 @@
     <link href="/assets/css/styles.css" rel="stylesheet">
     <link href="/assets/css/login.css" rel="stylesheet">
 </head>
+
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <main class="form-signin w-100 m-auto">
         <form action="/login/autenticar" method="POST">
@@ -33,7 +34,32 @@
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
         </form>
     </main>
+
+    <?php if(isset($_SESSION["SenhaIncorreta"])){ ?>
+    <div class="modal fade" id="SenhaIncorreta" tabindex="-1" aria-labelledby="SenhaIncorretaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="SenhaIncorretaLabel">SENHA INCORRETA!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A senha digitada está incorreta, por favor tente novamente.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php unset($_SESSION["SenhaIncorreta"]); } ?>
+
+
+    <script src="/assets/js/PopUps.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
 </body>
 </html>

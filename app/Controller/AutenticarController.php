@@ -10,12 +10,15 @@ class AutenticarController extends AbstractController
     {
         $usuarioConexao = new Usuario();
         $usuario = $usuarioConexao->buscarPorEmail($requestData['email']);
-        if (null === $usuario) {
+        if (null === $usuario || $usuario == false) {
             $this->redirect('/error');
+        }else{
+            if(password_verify($requestData["password"],$usuario[0]["senha"])){
+                $this->redirect('/app');
+            }else{
+                $_SESSION["SenhaIncorreta"] = True;
+                $this->redirect('/login');
+            }
         }
-
-        // lógica para fazer login
-        // redirecionar para painel
-        $this->redirect('/app');
     }
 }

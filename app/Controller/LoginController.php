@@ -6,6 +6,6 @@ class LoginController extends AbstractController
 {
     public function index(array $data): void
     {
-        $this->render('login.php');
+        $this->render(viewName:'login/login.php',simple: true);
     }
 }

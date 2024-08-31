@@ -14,9 +14,9 @@ class Usuario
         $this->query = new Query();
     }
 
-    public function buscarPorEmail(string $email): array
+    public function buscarPorEmail(string $email): array|bool
     {
-        $usuario = $this->query->select('usuario', 'email = ' . $email);
+        $usuario = $this->query->select('usuario', "email = '{$email}'");
 
         return $usuario;
     }

@@ -4,9 +4,15 @@ namespace App\Controller;
 
 abstract class AbstractController
 {
-    public function render(string $viewName, array $data = []): void
+    public function render(string $viewName, array $data = [],bool $simple = false): void
     {
-        require_once($_SERVER['DOCUMENT_ROOT'] . '/' . '/view/' . $viewName);
+        if($simple == false){
+            require_once($_SERVER['DOCUMENT_ROOT'] . '/' . '/view/includes/header.php');
+            require_once($_SERVER['DOCUMENT_ROOT'] . '/' . '/view/' . $viewName);
+            require_once($_SERVER['DOCUMENT_ROOT'] . '/' . '/view/includes/footer.php');
+        }else{
+            require_once($_SERVER['DOCUMENT_ROOT'] . '/' . '/view/' . $viewName);
+        }
     }
 
     public function showJson(array $data): never
