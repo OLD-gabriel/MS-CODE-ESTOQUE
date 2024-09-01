@@ -20,4 +20,17 @@ class Usuario
 
         return $usuario;
     }
+
+    public function inserirUsuario(string $nome,string $email,string $senha) : bool
+    {
+        $dados = [
+            "nome" => $nome,
+            "email" => $email,
+            "senha" => $senha
+        ];
+
+        $inserir = $this->query->insert("usuario",$dados);
+
+        return $inserir;
+    }
 }

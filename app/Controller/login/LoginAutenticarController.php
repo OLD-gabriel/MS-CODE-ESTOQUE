@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\login;
 
+use App\Controller\AbstractController;
 use App\Model\Usuario;
 
-class AutenticarController extends AbstractController
+class LoginAutenticarController extends AbstractController
 {
     public function index(array $requestData): void
     {
