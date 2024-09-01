@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\produtos;
+
+use App\Controller\AbstractController;
 
 class ProdutosController extends AbstractController
 {

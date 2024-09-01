@@ -2,7 +2,7 @@
       <div class="mb-4 d-flex flex-row justify-content-between">
         <h1>Produtos</h1>
         <div>
-          <a href="novo_produto.html" class="btn btn-primary"><i class="bi bi-plus"></i>Novo produto</a>
+          <a href="/produto/novo" class="btn btn-primary"><i class="bi bi-plus"></i>Novo produto</a>
         </div>
       </div>
 

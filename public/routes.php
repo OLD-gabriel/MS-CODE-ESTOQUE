@@ -10,7 +10,8 @@ use App\Controller\categorias\CategoriasController;
 use App\Controller\categorias\NovaCategoriaController;
 use App\Controller\categorias\AdicionarCategoriaController;
 use App\Controller\categorias\CategoriaExcluirController;
-use App\Controller\ProdutosController;
+use App\Controller\produtos\ProdutosController;
+use App\Controller\produtos\NovoProdutoController;
 
 $router = [
     'routes' => [
@@ -24,7 +25,8 @@ $router = [
         '/categorias'           => CategoriasController::class,
         '/categoria/nova'       => NovaCategoriaController::class,
         '/categoria/adicionar'  => AdicionarCategoriaController::class,
-        '/categoria/excluir'     => CategoriaExcluirController::class
+        '/categoria/excluir'    => CategoriaExcluirController::class,
+        '/produto/novo'         => NovoProdutoController::class
     ],
     'default'                   => NotFoundController::class
 ];

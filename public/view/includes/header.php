@@ -8,9 +8,6 @@
 
     <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -18,8 +15,8 @@
     <link href="/assets/css/styles.css" rel="stylesheet">
 </head>
 
-<body class="d-flex flex-column ">
-    <main class="min-vh-100">
+<body>
+    <main>
         <div class="border-bottom mb-2">
             <div class="container">
                 <header class="d-flex flex-wrap justify-content-center align-items-center py-3">
@@ -32,7 +29,7 @@
                     <ul class="nav nav-pills d-flex align-items-center">
                         <li class="nav-item"><a href="/app" class="nav-link active" aria-current="page">Início</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/vendas" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Vendas
                             </a>
@@ -42,7 +39,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/app" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Produtos
                             </a>
@@ -65,25 +62,26 @@
         </div>
 
 
-        <div class="offcanvas offcanvas-end" style="width: 250px;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header bg-dark text-white">
-        <h5 id="offcanvasRightLabel" class="mb-0 align-items-center">Painel de Usuário</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body d-flex flex-column justify-content-between p-2 bg-light">
-        <div class="user-info text-center mb-4">
-            <i class="fas fa-user-circle fa-4x mb-2 text-primary"></i>
-            <h6 class="mb-0"><?= $_SESSION["NOME"]; ?></h6>
-            <p class="text-muted mb-2" style="font-size: 0.875rem;"><?= $_SESSION["EMAIL"]; ?></p>
+        <div class="offcanvas offcanvas-end" style="width: 250px;" tabindex="-1" id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header bg-dark text-white">
+                <h5 id="offcanvasRightLabel" class="mb-0 align-items-center">Painel de Usuário</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-between p-2 bg-light">
+                <div class="user-info text-center mb-4">
+                    <i class="fas fa-user-circle fa-4x mb-2 text-primary"></i>
+                    <h6 class="mb-0"><?= $_SESSION["NOME"]; ?></h6>
+                    <p class="text-muted mb-2" style="font-size: 0.875rem;"><?= $_SESSION["EMAIL"]; ?></p>
+                </div>
+
+
+
+                <div class="mt-auto">
+                    <a href="/sair" class="btn btn-outline-danger w-100" aria-current="page">
+                        <i class="fas fa-sign-out-alt me-2"></i>Sair
+                    </a>
+                </div>
+            </div>
         </div>
-
- 
-
-        <div class="mt-auto">
-            <a href="/sair" class="btn btn-outline-danger w-100" aria-current="page">
-                <i class="fas fa-sign-out-alt me-2"></i>Sair
-            </a>
-        </div>
-    </div>
-</div>
-
