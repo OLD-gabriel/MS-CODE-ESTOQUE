@@ -1,13 +1,20 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\categorias;
 
-class ProdutosController extends AbstractController
+use App\Controller\AbstractController;
+
+class AdicionarCategoriaController extends AbstractController
 {
     public function index(array $data): void
     {
         if(isset($_SESSION["LOGIN"])){
-            $this->render(viewName:'produtos/produtos.php');
+            
+            
+
+
+
+
         }else{
             $this->redirect("/login");
         }
