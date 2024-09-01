@@ -8,14 +8,18 @@
 
     <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="/assets/css/styles.css" rel="stylesheet">
 </head>
 
-<body>
-    <main>
+<body class="d-flex flex-column ">
+    <main class="min-vh-100">
         <div class="border-bottom mb-2">
             <div class="container">
                 <header class="d-flex flex-wrap justify-content-center align-items-center py-3">
