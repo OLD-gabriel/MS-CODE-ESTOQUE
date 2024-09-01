@@ -2,7 +2,7 @@
     <div class="mb-4 d-flex flex-row justify-content-between">
         <h1>Categorias</h1>
         <div>
-            <a href="/nova/categoria" class="btn btn-primary"><i class="bi bi-plus"></i>Nova categoria</a>
+            <a href="/categoria/nova" class="btn btn-primary"><i class="bi bi-plus"></i>Nova categoria</a>
         </div>
     </div>
 
@@ -15,14 +15,16 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Informática</td>
+            <?php foreach($data as $key => $value){ ?>
+                <tr>
+                <th scope="row"><?= $value["id"]?></th>
+                <td><?= $value["nome"]?></td>
                 <td class="col-1 text-align-right">
                     <button class="btn btn-secondary btn-sm"><i class="bi bi-pencil"></i></button>
-                    <button class="btn btn-danger btn-sm"><i class="bi bi-x"></i></button>
+                    <button class="btn btn-danger btn-sm" onclick="PopUpExcluirCategoria('<?= $value['id']?>','<?= $value['nome']?>')" ><i class="bi bi-x"></i></button>
                 </td>
             </tr>
+            <?php } ?>
         </tbody>
 
     </table>
@@ -54,3 +56,49 @@
     unset($_SESSION["NomeCategoria"]);
 } 
 ?>
+
+<?php if(isset($_SESSION["ExcluirCategoria"])){ ?>
+  <div class="modal fade" id="ExcluirCategoria" tabindex="-1" aria-labelledby="ExcluirCategoriaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title text-success" id="ExcluirCategoriaLabel">SUCESSO!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <p>A categoria <?= $_SESSION["NomeCategoriaExcluida"]?> foi Excluida com sucesso!</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script>
+  var CategoriaModal = new bootstrap.Modal(document.getElementById('ExcluirCategoria'));
+      CategoriaModal.show();
+  </script>
+<?php
+    unset($_SESSION["ExcluirCategoria"]);
+    unset($_SESSION["NomeCategoriaExcluida"]);
+} 
+?>
+
+<div class="modal fade" id="ExcluirCategoriaPP" tabindex="-1" aria-labelledby="ExcluirCategoriaPPLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title text-danger" id="ExcluirCategoriaPPLabel">EXCLUIR!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <p> Tem certeza que deseja excluir a categoria <span id="nomeCategoria"></span> ? </p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                  <!-- <button type="button" class="btn btn-danger">Excluir</button> -->
+                  <a href="" id="AncoraExcluirCategoria" class="btn btn-danger">Excluir</a>
+              </div>
+          </div>
+      </div>
+  </div>

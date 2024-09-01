@@ -9,6 +9,7 @@ use App\Controller\login\RegisterController;
 use App\Controller\categorias\CategoriasController;
 use App\Controller\categorias\NovaCategoriaController;
 use App\Controller\categorias\AdicionarCategoriaController;
+use App\Controller\categorias\CategoriaExcluirController;
 use App\Controller\ProdutosController;
 
 $router = [
@@ -21,8 +22,9 @@ $router = [
         '/register/autenticar'  => RegisterAutenticarController::class,
         '/sair'                 => EncerrarController::class,
         '/categorias'           => CategoriasController::class,
-        '/nova/categoria'       => NovaCategoriaController::class,
-        '/categoria/adicionar'  => AdicionarCategoriaController::class
+        '/categoria/nova'       => NovaCategoriaController::class,
+        '/categoria/adicionar'  => AdicionarCategoriaController::class,
+        '/categoria/excluir'     => CategoriaExcluirController::class
     ],
     'default'                   => NotFoundController::class
 ];

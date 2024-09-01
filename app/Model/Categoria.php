@@ -14,7 +14,8 @@ class Categoria
         $this->query = new Query();
     }
 
-    public function adicionarCategoria($nome){
+    public function adicionarCategoria($nome): bool
+    {
 
         $dados = [
             "nome" => $nome
@@ -24,5 +25,19 @@ class Categoria
 
         return $inserir;
 
+    }
+
+    public function categorias(): array
+    {
+        $categorias = $this->query->select("categoria");
+
+        return $categorias;
+    }
+
+    public function excluirCategoria($id): bool
+    {
+        $excluir = $this->query->delete("categoria","id = {$id}");
+        
+        return $excluir;
     }
 }

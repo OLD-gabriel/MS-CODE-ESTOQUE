@@ -6,4 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // myModal2.show();
 });
 
-console.log("gsddgsdg")
+function PopUpExcluirCategoria(id,nome){
+
+    
+
+    document.getElementById('nomeCategoria').innerHTML = nome
+    document.getElementById('AncoraExcluirCategoria').href = "/categoria/excluir?id=" + id + "&nome=" + nome;
+
+    var CategoriaModal = new bootstrap.Modal(document.getElementById('ExcluirCategoriaPP'));
+    CategoriaModal.show();
+
+
+}
