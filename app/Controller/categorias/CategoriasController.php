@@ -10,7 +10,7 @@ class CategoriasController extends AbstractController
     public function index(array $data): void
     { 
         if(isset($_SESSION["LOGIN"])){
-            $categorias = new Categoria();            
+            $categorias = new Categoria();      
             $this->render(viewName:'categoria/categorias.php', data: $categorias->categorias());
 
         }else{

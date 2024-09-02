@@ -5,7 +5,7 @@
 
       
       <div class="w-50 mt-2">
-        <form>
+        <form method="POST" action="/produto/adicionar" >
           <div class="mb-3">
             <label for="nome" class="form-label">Nome:</label>
             <input type="text" class="form-control" id="nome" name="nome">

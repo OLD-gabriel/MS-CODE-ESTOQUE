@@ -37,3 +37,30 @@
       </table>
     </div>
   </main>
+
+  <?php if(isset($_SESSION["AdicionarProduto"])){ ?>
+  <div class="modal fade" id="AdicionarProduto" tabindex="-1" aria-labelledby="AdicionarProdutoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title text-success" id="AdicionarProdutoLabel">SUCESSO!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <p>O produto <?= $_SESSION["NomeProduto"]?> foi inserido com sucesso!</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script>
+  var CategoriaModal = new bootstrap.Modal(document.getElementById('AdicionarProduto'));
+      CategoriaModal.show();
+  </script>
+<?php
+    unset($_SESSION["AdicionarProduto"]);
+    unset($_SESSION["NomeProduto"]);
+} 
+?>
