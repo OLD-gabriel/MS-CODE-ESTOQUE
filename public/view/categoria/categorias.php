@@ -1,5 +1,5 @@
 
-<div class="container py-5">
+<div class="container py-5 main">
     <div class="mb-4 d-flex flex-row justify-content-between">
         <h1>Categorias</h1>
         <div>

@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/assets/images/carts.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,16 +20,17 @@
 
 <body>
     <main>
-        <div class="border-bottom mb-2">
+        <div class="border-bottom mb-2 bg-light shadow-sm border-bottom">
             <div class="container">
-                <header class="d-flex flex-wrap justify-content-center align-items-center py-3">
+                <header
+                    class="d-flex flex-wrap justify-content-between align-items-center py-3">
                     <a href="/"
-                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                        <img class="me-3" src="/assets/images/logotipo.svg" width="53">
-                        <span class="fs-4">MS Code - Estoque</span>
+                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                        <img class="me-3" src="/assets/images/logotipo.svg" width="53" alt="Logotipo">
+                        <span class="fs-4 fw-bold">MS Code - Estoque</span>
                     </a>
 
-                    <ul class="nav nav-pills d-flex align-items-center">
+                    <ul class="nav nav-pills">
                         <li class="nav-item"><a href="/app" class="nav-link active" aria-current="page">Início</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -51,16 +52,15 @@
                                 <li><a class="dropdown-item active" href="/categorias">Categorias</a></li>
                             </ul>
                         </li>
-                        <!-- <li class="nav-item"><a href="#" class="btn btn-outline-danger m-0 ms-4" aria-current="page">Sair</a></li> -->
-                        <li>
+                        <li class="nav-item">
                             <a data-bs-toggle="offcanvas" href="#offcanvasRight" role="button"
                                 aria-controls="offcanvasRight">
-                                <i class="fas fa-user-circle fa-2x" style="color: #0d6efd;"></i>
+                                <i class="fas fa-user-circle fa-2x text-primary"></i>
                             </a>
-
                         </li>
                     </ul>
                 </header>
+
             </div>
         </div>
 

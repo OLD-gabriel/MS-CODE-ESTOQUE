@@ -1,4 +1,4 @@
-    <div class="container py-5">
+    <div class="container py-5 main">
       <div class="mb-4 d-flex flex-row justify-content-between">
         <h1>Produtos</h1>
         <div>
