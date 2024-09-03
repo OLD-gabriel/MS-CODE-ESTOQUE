@@ -47,4 +47,11 @@ class Produto
 
         return $update;
     }
+
+    public function aumentarEstoque(int $id, int $quantidade): bool
+    {
+        $update = $this->query->update("produto",["quantidade_disponivel" => $quantidade], "id = {$id}");
+
+        return $update;
+    }
 }
