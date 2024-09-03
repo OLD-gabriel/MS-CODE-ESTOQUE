@@ -93,7 +93,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                  <p> Tem certeza que deseja excluir a categoria <span id="nomeCategoria"></span> ? </p>
+                  <p> Tem certeza que deseja excluir o produto <span id="nomeCategoria"></span> ? </p>
               </div>
               <div class="modal-footer">
                   <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>

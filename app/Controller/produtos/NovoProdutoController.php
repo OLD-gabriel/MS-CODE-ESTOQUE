@@ -15,7 +15,7 @@ class NovoProdutoController extends AbstractController
                 "categorias" => $query->categorias()
             ];
 
-            $this->render(viewName:'produtos/NovoProduto.php',data: $dados);
+            $this->render(viewName:'produtos/NovoProduto.php',data: $dados, title: "Adicionar Produto");
         }else{
             $this->redirect("/login");
         }

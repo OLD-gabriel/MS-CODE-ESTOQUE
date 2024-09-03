@@ -1,17 +1,20 @@
 <?php
 
-namespace App\Controller\categorias;
+namespace App\Controller\Produtos;
 
 use App\Controller\AbstractController;
+use App\Model\Produto;
 
-class NovaCategoriaController extends AbstractController
+class ProdutoEditarController extends AbstractController
 {
     public function index(array $data): void
-    {
+    { 
         if(isset($_SESSION["LOGIN"])){
-            $this->render(viewName:'categoria/novaCategoria.php', title: "Adicionar Categoria");
+            
         }else{
             $this->redirect("/login");
         }
     }
+
+
 }

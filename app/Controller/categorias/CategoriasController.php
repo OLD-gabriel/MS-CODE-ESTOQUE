@@ -10,8 +10,9 @@ class CategoriasController extends AbstractController
     public function index(array $data): void
     { 
         if(isset($_SESSION["LOGIN"])){
-            $categorias = new Categoria();      
-            $this->render(viewName:'categoria/categorias.php', data: $categorias->categorias());
+            $query = new Categoria();      
+            $categorias = $query->categorias();
+            $this->render(viewName:'categoria/categorias.php', data: $categorias,title: "Categorias");
 
         }else{
             $this->redirect("/login");

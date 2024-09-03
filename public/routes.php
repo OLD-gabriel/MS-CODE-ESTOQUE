@@ -13,10 +13,12 @@ use App\Controller\categorias\CategoriaExcluirController;
 use App\Controller\produtos\ProdutosController;
 use App\Controller\produtos\NovoProdutoController;
 use App\Controller\produtos\AdicionarProdutoController;
+use App\Controller\produtos\ProdutoExcluirController;
 
 $router = [
     'routes' => [
         '/'                     => LoginController::class,
+        ''                     => LoginController::class,
         '/login'                => LoginController::class,
         '/login/autenticar'     => LoginAutenticarController::class,
         '/app'                  => ProdutosController::class,
@@ -28,7 +30,8 @@ $router = [
         '/categoria/adicionar'  => AdicionarCategoriaController::class,
         '/categoria/excluir'    => CategoriaExcluirController::class,
         '/produto/novo'         => NovoProdutoController::class,
-        '/produto/adicionar'    => AdicionarProdutoController::class
+        '/produto/adicionar'    => AdicionarProdutoController::class,
+        '/produto/excluir'    => ProdutoExcluirController::class
     ],
     'default'                   => NotFoundController::class
 ];

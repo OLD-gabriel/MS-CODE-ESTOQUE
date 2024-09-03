@@ -11,7 +11,7 @@ class AdicionarProdutoController extends AbstractController
         if(isset($_SESSION["LOGIN"])){
 
             $dataDia = new \DateTime();
-            $dataFormatada = $dataDia->format("Y-m-d");
+            $dataFormatada = $dataDia->format("Y-m-d H:i:s");
 
             $dados = [
                 "nome"                  => $data["nome"],

@@ -15,3 +15,13 @@ function PopUpExcluirCategoria(id,nome){
     CategoriaModal.show();
 
 }
+
+function ExcluirProdutoPP(nome,id){
+
+    document.getElementById('NomeProduto').innerHTML = nome
+    document.getElementById('AncoraExcluirProduto').href = "/produto/excluir?id=" + id + "&nome=" + nome;
+
+    var CategoriaModal = new bootstrap.Modal(document.getElementById('ExcluirProdutoPP'));
+    CategoriaModal.show();
+
+}

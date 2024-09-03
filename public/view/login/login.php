@@ -10,6 +10,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="/assets/css/styles.css" rel="stylesheet">
     <link href="/assets/css/login.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 </head>
 
 <body class="d-flex align-items-center justify-content-center vh-100 bg-light">
@@ -23,7 +27,7 @@
             <div class="form-floating mb-3">
                 <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" required>
                 <label for="email">Email</label>
-            </div>
+            </div>  
             <div class="form-floating mb-3">
                 <input type="password" name="password" class="form-control" id="senha" placeholder="Senha" required>
                 <label for="senha">Senha</label>
@@ -33,7 +37,7 @@
             <a href="/register" class="btn btn-outline-secondary w-100">Cadastrar</a>
             <p class="mt-5 mb-3 text-muted">&copy; 2017–2024</p>
         </form>
-    </main>
+    </main>         
 
     <?php if(isset($_SESSION["SenhaIncorreta"])){ ?>
     <div class="modal fade" id="SenhaIncorreta" tabindex="-1" aria-labelledby="SenhaIncorretaLabel" aria-hidden="true">
@@ -61,10 +65,11 @@
 
     <script src="/assets/js/PopUps.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-
+    -->
+    
 </body>
 
 </html>
