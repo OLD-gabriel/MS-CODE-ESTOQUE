@@ -16,6 +16,8 @@ use App\Controller\produtos\ProdutosController;
 use App\Controller\produtos\NovoProdutoController;
 use App\Controller\produtos\AdicionarProdutoController;
 use App\Controller\produtos\ProdutoExcluirController;
+use App\Controller\produtos\ProdutoEditarController;
+use App\Controller\produtos\ProdutoSalvarEditController;
 
 $router = [
     'routes' => [
@@ -35,7 +37,10 @@ $router = [
         '/categorias/salvar'    => CategoriaSalvarEditController::class,
         '/produto/novo'         => NovoProdutoController::class,
         '/produto/adicionar'    => AdicionarProdutoController::class,
-        '/produto/excluir'      => ProdutoExcluirController::class
+        '/produto/excluir'      => ProdutoExcluirController::class,
+        '/produto/editar'      => ProdutoEditarController::class,
+        '/produto/salvar'      => ProdutoSalvarEditController::class,
+        '/produto/aumentar'
     ],
     'default'                   => NotFoundController::class
 ];

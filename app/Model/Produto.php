@@ -34,4 +34,17 @@ class Produto
         
         return $excluir;
     }
+
+    public function pegaProduto(int $id): array
+    {
+        return $this->query->select('produto', "id = {$id}")[0];
+    }
+
+    public function editarProduto(int $id, array $dados): bool
+    {
+
+        $update = $this->query->update('produto', $dados, "id = {$id}");
+
+        return $update;
+    }
 }

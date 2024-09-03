@@ -34,16 +34,16 @@ class Categoria
         return $categorias;
     }
 
-    public function pegaCategoria(int $id): array
-    {
-        return $this->query->select('categoria', "id = {$id}")[0];
-    }
-
     public function excluirCategoria($id): bool
     {
         $excluir = $this->query->delete("categoria","id = {$id}");
         
         return $excluir;
+    }
+
+    public function pegaCategoria(int $id): array
+    {
+        return $this->query->select('categoria', "id = {$id}")[0];
     }
 
     public function editarCategoria(int $id, string $nome): bool
