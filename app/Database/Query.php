@@ -12,7 +12,7 @@ class Query
             host: '127.0.0.1',
             database: 'Estoque',
             username: 'root',
-            password: 'gabCBA',
+            password: '',
             port: 3306,
         );
 

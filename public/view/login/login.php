@@ -62,6 +62,29 @@
     </script>
     <?php unset($_SESSION["SenhaIncorreta"]); } ?>
 
+    <?php if(isset($_SESSION["Cadastro"])){ ?>
+    <div class="modal fade" id="Cadastro" tabindex="-1" aria-labelledby="CadastroLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="CadastroLabel">SUCESSO!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>O usuario foi cadastrado com sucesso!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var senhaModal = new bootstrap.Modal(document.getElementById('Cadastro'));
+        senhaModal.show();
+    </script>
+    <?php unset($_SESSION["Cadastro"]); } ?>
+
 
     <script src="/assets/js/PopUps.js"></script>
 

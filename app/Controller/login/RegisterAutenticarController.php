@@ -14,7 +14,8 @@ class RegisterAutenticarController extends AbstractController
             $inserir = new Usuario();
             $query = $inserir->inserirUsuario($requestData["username"],$requestData["email"],$senha_hash);
             if($query){
-                $this->redirect('/login');
+            $_SESSION["Cadastro"] = True;
+            $this->redirect('/login');
             }
         }else{
             $_SESSION["SenhaIncorreta"] = True;
